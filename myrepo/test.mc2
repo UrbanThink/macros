@@ -1,0 +1,40 @@
+{
+  'name' 'test'
+  'desc' 
+  <'
+ 
+  '>
+  'sig' [ [ [ 'a:LONG' 'b:LONG'  ] [ 'r:LONG'  ] ] ] // Signature
+  'params' {
+    // Signature params description
+    'b' 'un entier'
+    'a' 'un autre entier'
+    'r' 'the result'
+  }
+  'examples' [
+    <'
+    '>
+  ]
+} 'info' STORE
+
+<%
+  !$info INFO
+  SAVE 'context' STORE
+  <%
+    // Code of the actual macro
+    [ 'a' 'b' ] STORE
+    $a $b + 'r' STORE 
+    $r
+  %>
+  <% // catch any exception
+    RETHROW
+  %>
+  <% // finally, restore the context
+    $context RESTORE
+  %> TRY
+%>
+'macro' STORE
+
+// Unit tests
+
+$macro
