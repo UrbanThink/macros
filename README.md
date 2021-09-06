@@ -2,7 +2,7 @@
 Répertoire contenant toutes les macros de nos activités avec Warp10
 
 
-============== FRENCH =================
+**============== FRENCH =================**
 
 Ce répertoire peut contenir des sous-dossiers avec des macros. 
 Une macro est un code Warp10 nous permettant d'exclure une fonctionnalités dans un autre fichier. 
@@ -19,7 +19,7 @@ Pour appeler la macro dans warpscript, utilisez @myrepo/test
 
 
 
-============== ENGLISH =================
+**============== ENGLISH =================**
 
 This directory contains subdirectories with macros.
 
